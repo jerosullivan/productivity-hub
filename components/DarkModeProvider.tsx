@@ -33,18 +33,14 @@ export function DarkModeProvider({ children }: { children: React.ReactNode }) {
 
       // Update document class
       if (isDark) {
-        console.log('Adding dark class to html element');
         document.documentElement.classList.add('dark');
       } else {
-        console.log('Removing dark class from html element');
         document.documentElement.classList.remove('dark');
       }
-      console.log('HTML classes:', document.documentElement.className);
     }
   }, [isDark, mounted]);
 
   const toggleDarkMode = () => {
-    console.log('Toggle dark mode clicked. Current isDark:', isDark);
     setIsDark(!isDark);
   };
 
